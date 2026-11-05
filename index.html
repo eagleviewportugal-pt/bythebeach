@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>By the Beach Praia da Rocha</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Onest:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<meta name="description" content="Apartamento T1 para férias a 700 m da Praia da Rocha, Portimão. Até 4 hóspedes, varanda, condomínio com segurança e estacionamento. Reserve diretamente.">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="By the Beach · Apartamento na Praia da Rocha">
+<meta property="og:description" content="T1 a 700 m da Praia da Rocha, Portimão. Até 4 hóspedes. Reserve diretamente.">
+<meta property="og:image" content="img/praia-da-rocha-aerea.jpg">
+<meta name="theme-color" content="#12393d">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"VacationRental","name":"By the Beach · Apartamento Praia da Rocha","identifier":"114540/AL",
+"address":{"@type":"PostalAddress","streetAddress":"Avenida das Comunidades Lusíadas, 1","postalCode":"8500-801","addressLocality":"Portimão","addressCountry":"PT"},
+"containsPlace":{"@type":"Accommodation","floorSize":{"@type":"QuantitativeValue","value":46,"unitCode":"MTK"},"numberOfBedrooms":1,"numberOfBathroomsTotal":1,"occupancy":{"@type":"QuantitativeValue","maxValue":4}},
+"image":"img/praia-da-rocha-aerea.jpg"}
+</script>
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<style>
+/* Layout: aerial photo opens the page, then a quiet salt-white column; the sea teal carries the page, the logo's sunset orange appears only on the booking actions. */
+:root{
+  --salt:#f1f5f4; --surface:#ffffff; --ink:#12393d; --ink-soft:#506b6d; --sea:#1d7f90; --sea-wash:#e1eeee;
+  --sun:#d95e22; --sun-ink:#ffffff; --line:rgba(18,57,61,.14); --booked:#dfe5e4; --booked-ink:#8a9c9c;
+  --shade:rgba(8,32,36,.62);
+  --display:"Gloock", "Georgia", "Times New Roman", serif;
+  --body:"Onest", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --wrap:1180px; --r:6px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --salt:#0c1d1f; --surface:#132a2d; --ink:#e4efed; --ink-soft:#9ab3b2; --sea:#5ab9c9; --sea-wash:#173538;
+  --sun:#ef7f45; --sun-ink:#1a0d06; --line:rgba(228,239,237,.13); --booked:#1d3336; --booked-ink:#5f7b7b; --shade:rgba(4,14,16,.7); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --salt:#0c1d1f; --surface:#132a2d; --ink:#e4efed; --ink-soft:#9ab3b2; --sea:#5ab9c9; --sea-wash:#173538;
+  --sun:#ef7f45; --sun-ink:#1a0d06; --line:rgba(228,239,237,.13); --booked:#1d3336; --booked-ink:#5f7b7b; --shade:rgba(4,14,16,.7); color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--salt);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--salt)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--sea);outline-offset:3px;border-radius:2px}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.08;text-wrap:balance;margin:0;letter-spacing:-.005em}
+h2{font-size:clamp(2rem,4.2vw,3.1rem)}
+.label{font-family:var(--mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
+p{margin:0}
+
+/* top bar */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--salt) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;gap:20px;min-height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-size:1.15rem}
+.brand img{width:40px;height:40px}
+.nav{display:flex;gap:22px;margin-left:auto;font-size:.93rem}
+.nav a{text-decoration:none;color:var(--ink-soft)}
+.nav a:hover{color:var(--ink)}
+.langs{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.langs button{font:500 .74rem var(--mono);letter-spacing:.06em;background:none;border:0;color:var(--ink-soft);padding:6px 10px;cursor:pointer}
+.langs button[aria-pressed="true"]{background:var(--ink);color:var(--salt)}
+.bar .book{margin-left:4px}
+@media (max-width:860px){.nav{display:none}.langs{margin-left:auto}}
+@media (max-width:520px){.bar .book{display:none}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:600 .95rem var(--body);text-decoration:none;border-radius:999px;padding:12px 22px;border:1px solid transparent;cursor:pointer;transition:transform .15s ease,background .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-sun{background:var(--sun);color:var(--sun-ink)}
+.btn-ghost{border-color:currentColor;background:transparent}
+.btn-sm{padding:8px 16px;font-size:.86rem}
+
+/* hero */
+.hero{position:relative;color:#fff;background:#0b3a40 url("img/praia-da-rocha-aerea.jpg") center 40%/cover no-repeat;min-height:clamp(520px,74vh,760px);display:flex;align-items:flex-end}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,28,32,.05) 30%,rgba(6,28,32,.78) 100%)}
+.hero .wrap{position:relative;z-index:1;width:100%;padding-block:56px 48px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:end}
+.hero h1{font-size:clamp(2.6rem,6.4vw,5.2rem);max-width:13ch}
+.hero p{font-size:1.12rem;max-width:44ch;margin-top:18px;color:rgba(255,255,255,.88)}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero .ctas .btn-ghost{color:#fff}
+.hero .badge{width:150px;height:150px;filter:drop-shadow(0 6px 22px rgba(0,0,0,.35))}
+.hero .coords{position:absolute;right:max(20px,env(safe-area-inset-right,0px));top:20px;z-index:1;font:400 .72rem var(--mono);letter-spacing:.1em;color:rgba(255,255,255,.8)}
+@media (max-width:700px){.hero .wrap{grid-template-columns:1fr}.hero .badge{width:96px;height:96px;order:-1}.hero .coords{display:none}}
+
+/* facts */
+.facts{border-bottom:1px solid var(--line);background:var(--surface)}
+.facts ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr))}
+.facts li{padding:22px 16px 20px;border-left:1px solid var(--line);display:flex;flex-direction:column;gap:2px}
+.facts li:first-child{border-left:0;padding-left:0}
+.facts b{font-family:var(--display);font-weight:400;font-size:1.6rem;line-height:1.1}
+.facts span{font-size:.85rem;color:var(--ink-soft)}
+@media (max-width:900px){.facts ul{grid-template-columns:repeat(3,minmax(0,1fr))}.facts li:nth-child(4){border-left:0;padding-left:0}.facts li:nth-child(n+4){border-top:1px solid var(--line)}}
+@media (max-width:480px){.facts ul{grid-template-columns:repeat(2,minmax(0,1fr))}.facts li{border-left:0!important;padding-left:0!important;border-top:1px solid var(--line)}.facts li:nth-child(-n+2){border-top:0}.facts li:nth-child(even){padding-left:16px!important;border-left:1px solid var(--line)!important}}
+
+section{padding-block:clamp(64px,9vw,112px)}
+.head{display:flex;flex-direction:column;gap:12px;margin-bottom:40px;max-width:720px}
+
+/* apartment */
+.apt{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(32px,6vw,80px);align-items:start}
+.apt .copy{display:flex;flex-direction:column;gap:18px;max-width:60ch}
+.apt .copy p{color:var(--ink)}
+.apt .copy p+p{color:var(--ink-soft)}
+.amen{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:28px}
+.amen h3{font-size:1.4rem;margin-bottom:16px}
+.amen ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 20px;font-size:.95rem}
+.amen li{display:flex;gap:10px;align-items:baseline}
+.amen li::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:var(--sea);transform:translateY(-1px)}
+.amen .al{margin-top:22px;padding-top:16px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media (max-width:860px){.apt{grid-template-columns:1fr}}
+@media (max-width:420px){.amen ul{grid-template-columns:1fr}}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:clamp(150px,17vw,230px);gap:10px}
+.gallery button{all:unset;cursor:zoom-in;position:relative;overflow:hidden;border-radius:4px;background:var(--sea-wash)}
+.gallery button:focus-visible{outline:2px solid var(--sea);outline-offset:3px}
+.gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.gallery button:hover img{transform:scale(1.035)}
+.gallery .cap{position:absolute;left:10px;bottom:10px;font:500 .7rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#fff;background:rgba(8,32,36,.55);padding:4px 8px;border-radius:3px}
+.g1{grid-column:span 2;grid-row:span 2}.g2{grid-row:span 2}
+@media (max-width:760px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:150px}.g2{grid-row:span 1}}
+.lightbox{position:fixed;inset:0;z-index:50;background:rgba(5,16,18,.94);display:flex;align-items:center;justify-content:center;padding:max(56px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(56px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.lightbox img{max-height:100%;max-width:min(1400px,100%);object-fit:contain;border-radius:3px}
+.lightbox button{position:absolute;background:rgba(255,255,255,.1);color:#fff;border:0;width:46px;height:46px;border-radius:50%;font-size:1.4rem;cursor:pointer}
+.lb-close{top:calc(12px + env(safe-area-inset-top,0px));right:calc(12px + env(safe-area-inset-right,0px))}
+.lb-prev{left:calc(12px + env(safe-area-inset-left,0px));top:50%;transform:translateY(-50%)}
+.lb-next{right:calc(12px + env(safe-area-inset-right,0px));top:50%;transform:translateY(-50%)}
+.lb-count{position:absolute;bottom:calc(16px + env(safe-area-inset-bottom,0px));left:0;right:0;text-align:center;font:400 .75rem var(--mono);color:rgba(255,255,255,.7);letter-spacing:.1em}
+
+/* availability */
+.avail{background:var(--surface);border-block:1px solid var(--line)}
+.cal-wrap{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:clamp(24px,4vw,48px);align-items:start}
+@media (max-width:900px){.cal-wrap{grid-template-columns:1fr}}
+.cal-nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.cal-nav button{background:none;border:1px solid var(--line);color:var(--ink);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:1.1rem}
+.cal-nav button:disabled{opacity:.35;cursor:default}
+.months{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px}
+@media (max-width:640px){.months{grid-template-columns:1fr}.months .month:nth-child(2){display:none}}
+.month h3{font-size:1.35rem;margin-bottom:12px;text-transform:capitalize}
+.grid7{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:3px}
+.dow{font:500 .68rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);text-align:center;padding-bottom:6px}
+.day{aspect-ratio:1;max-width:100%;border:0;background:transparent;color:var(--ink);font:500 .92rem var(--body);font-variant-numeric:tabular-nums;border-radius:4px;cursor:pointer;position:relative}
+.day:hover:not(:disabled){background:var(--sea-wash)}
+.day:disabled{cursor:default;color:var(--booked-ink)}
+.day.past{opacity:.4}
+.day.booked{background:var(--booked);color:var(--booked-ink);text-decoration:line-through;text-decoration-thickness:1px}
+.day.in-range{background:var(--sea-wash);border-radius:0}
+.day.sel{background:var(--sea);color:var(--surface)}
+.day.today::after{content:"";position:absolute;left:50%;bottom:5px;width:4px;height:4px;border-radius:50%;background:var(--sun);transform:translateX(-50%)}
+.legend{display:flex;flex-wrap:wrap;gap:16px;margin-top:20px;font-size:.84rem;color:var(--ink-soft)}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:-2px;margin-right:6px}
+.pick{border:1px solid var(--line);border-radius:var(--r);padding:24px;display:flex;flex-direction:column;gap:16px;background:var(--salt)}
+.pick dl{margin:0;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.pick dt{font:500 .68rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+.pick dd{margin:2px 0 0;font-family:var(--display);font-size:1.3rem;font-variant-numeric:tabular-nums}
+.pick .nights{font-size:.92rem;color:var(--ink-soft);min-height:1.5em}
+.pick .warn{color:var(--sun);font-size:.9rem}
+.pick .btn{width:100%}
+.pick .upd{font-size:.78rem;color:var(--ink-soft)}
+.linkbtn{background:none;border:0;padding:0;color:var(--ink-soft);text-decoration:underline;cursor:pointer;font:inherit;font-size:.85rem;align-self:flex-start}
+
+/* form */
+.book-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(32px,6vw,80px);align-items:start}
+@media (max-width:860px){.book-grid{grid-template-columns:1fr}}
+.book-side{display:flex;flex-direction:column;gap:18px;max-width:46ch}
+.book-side p{color:var(--ink-soft)}
+.steps{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:14px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:28px 1fr;gap:12px;font-size:.95rem;counter-increment:s}
+.steps li::before{content:counter(s);font:500 .78rem var(--mono);width:28px;height:28px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;color:var(--sea)}
+form{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:clamp(20px,3.5vw,36px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.f{display:flex;flex-direction:column;gap:6px;min-width:0}
+.f.full{grid-column:1/-1}
+@media (max-width:520px){form{grid-template-columns:1fr}}
+label{font-size:.86rem;font-weight:500}
+label small{font-weight:400;color:var(--ink-soft)}
+input,select,textarea{font:inherit;font-size:1rem;color:var(--ink);background:var(--salt);border:1px solid var(--line);border-radius:4px;padding:11px 12px;width:100%;min-width:0}
+textarea{min-height:120px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--sea);box-shadow:0 0 0 3px color-mix(in srgb,var(--sea) 20%,transparent)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:.86rem;color:var(--ink-soft)}
+.consent input{width:18px;height:18px;flex:none;margin-top:2px;accent-color:var(--sea)}
+.form-foot{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:16px;justify-content:space-between}
+.status{font-size:.92rem}
+.status.ok{color:var(--sea)}.status.err{color:var(--sun)}
+.sent{grid-column:1/-1;display:flex;flex-direction:column;gap:10px;padding-block:20px}
+.sent h3{font-size:1.8rem}
+
+/* location */
+.loc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,80px);align-items:start}
+@media (max-width:860px){.loc{grid-template-columns:1fr}}
+.dist{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.dist li{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.dist span:last-child{font-family:var(--mono);font-size:.88rem;color:var(--ink-soft);white-space:nowrap;font-variant-numeric:tabular-nums}
+.addr{display:flex;flex-direction:column;gap:14px}
+.addr address{font-style:normal;font-family:var(--display);font-size:1.5rem;line-height:1.25}
+.loc-photo{border-radius:4px;overflow:hidden;aspect-ratio:16/10;max-width:100%}
+.loc-photo img{width:100%;height:100%;object-fit:cover;display:block}
+
+footer{background:var(--ink);color:var(--salt);padding-block:48px calc(36px + env(safe-area-inset-bottom,0px))}
+footer .wrap{display:grid;grid-template-columns:auto 1fr auto;gap:32px;align-items:start}
+footer img{width:76px;height:76px}
+footer .cols{display:flex;flex-wrap:wrap;gap:12px 40px;font-size:.92rem}
+footer .cols div{display:flex;flex-direction:column;gap:6px}
+footer .label{color:color-mix(in srgb,var(--salt) 60%,transparent)}
+footer a{text-decoration:none;opacity:.9}
+footer a:hover{opacity:1;text-decoration:underline}
+footer .credit{font-size:.8rem;opacity:.65;text-align:right;max-width:24ch}
+@media (max-width:760px){footer .wrap{grid-template-columns:1fr}footer .credit{text-align:left}}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="img/logo.png" alt="" width="40" height="40"><span>By the Beach</span></a>
+    <nav class="nav" aria-label="Secções">
+      <a href="#apartamento" data-i="nav_apt">O apartamento</a>
+      <a href="#fotos" data-i="nav_photos">Fotos</a>
+      <a href="#disponibilidade" data-i="nav_avail">Disponibilidade</a>
+      <a href="#localizacao" data-i="nav_loc">Localização</a>
+    </nav>
+    <div class="langs" role="group" aria-label="Idioma">
+      <button type="button" data-lang="pt" aria-pressed="true">PT</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      <button type="button" data-lang="es" aria-pressed="false">ES</button>
+    </div>
+    <a class="btn btn-sun btn-sm book" href="#reservar" data-i="nav_book">Reservar</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <span class="coords">37°07′N · 8°32′W</span>
+    <div class="wrap">
+      <div>
+        <h1 data-i="hero_t">Um T1 a sete minutos a pé da Praia da Rocha</h1>
+        <p data-i="hero_p">Apartamento de férias em Portimão, num condomínio fechado com segurança 24 horas e estacionamento. Areal, restaurantes e marina, tudo a pé.</p>
+        <div class="ctas">
+          <a class="btn btn-sun" href="#disponibilidade" data-i="hero_c1">Ver datas livres</a>
+          <a class="btn btn-ghost" href="#fotos" data-i="hero_c2">Ver fotografias</a>
+        </div>
+      </div>
+      <img class="badge" src="img/logo.png" alt="By the Beach — Apartamento, Praia da Rocha, Portimão" width="150" height="150">
+    </div>
+  </div>
+
+  <div class="facts">
+    <div class="wrap">
+      <ul>
+        <li><b>46 m²</b><span data-i="f_area">de área útil</span></li>
+        <li><b>4</b><span data-i="f_guests">hóspedes no máximo</span></li>
+        <li><b>1 + 1</b><span data-i="f_beds">cama de casal e sofá-cama</span></li>
+        <li><b>1</b><span data-i="f_bath">casa de banho com banheira</span></li>
+        <li><b data-i="f_terr_b">Varanda</b><span data-i="f_terr">pequena, com jardim vertical</span></li>
+        <li><b>700 m</b><span data-i="f_beach">até ao areal</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <section id="apartamento">
+    <div class="wrap apt">
+      <div class="copy">
+        <span class="label" data-i="apt_l">O apartamento</span>
+        <h2 data-i="apt_t">Sala com luz, quarto sossegado e uma pequena varanda para o fim do dia</h2>
+        <p data-i="apt_p1">A sala abre-se para a cozinha e tem mesa de jantar para dois e um sofá de canto que se transforma em cama. O quarto tem cama de casal e porta direta para uma pequena varanda, onde cabem duas cadeiras e uma mesa baixa, com um jardim vertical que dá privacidade.</p>
+        <p data-i="apt_p2">A cozinha está equipada para refeições a sério: fogão, frigorífico com congelador, micro-ondas, torradeira, chaleira e máquina de lavar roupa. Roupa de cama e toalhas incluídas. Berço de viagem disponível a pedido.</p>
+      </div>
+      <aside class="amen">
+        <h3 data-i="am_t">O que encontra</h3>
+        <ul>
+          <li data-i="am1">Wi-Fi</li>
+          <li data-i="am2">Televisão</li>
+          <li data-i="am3">Cozinha equipada</li>
+          <li data-i="am4">Máquina de lavar roupa</li>
+          <li data-i="am5">Banheira</li>
+          <li data-i="am6">Secador de cabelo</li>
+          <li data-i="am7">Ferro de engomar</li>
+          <li data-i="am8">Varanda mobilada</li>
+          <li data-i="am9">Estacionamento</li>
+          <li data-i="am10">Segurança 24 h</li>
+          <li data-i="am11">Roupa de cama e toalhas</li>
+          <li data-i="am12">Berço a pedido</li>
+        </ul>
+        <div class="al"><span class="label" data-i="al_l">Registo de Alojamento Local</span><span class="label" style="color:var(--ink)">114540/AL</span></div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="fotos" style="padding-top:0">
+    <div class="wrap">
+      <div class="head">
+        <span class="label" data-i="ph_l">Fotografias</span>
+        <h2 data-i="ph_t">Cada divisão, tal como a vai encontrar</h2>
+      </div>
+      <div class="gallery" id="gallery"></div>
+    </div>
+  </section>
+
+  <section id="disponibilidade" class="avail">
+    <div class="wrap">
+      <div class="head">
+        <span class="label" data-i="av_l">Disponibilidade</span>
+        <h2 data-i="av_t">Escolha a data de entrada e a data de saída</h2>
+        <p style="color:var(--ink-soft)" data-i="av_p">Os dias riscados já estão reservados. Toque num dia livre para a entrada e noutro para a saída; as datas passam para o pedido de reserva.</p>
+      </div>
+      <div class="cal-wrap">
+        <div>
+          <div class="cal-nav">
+            <button type="button" id="prev" aria-label="Mês anterior">‹</button>
+            <span class="label" id="calRange"></span>
+            <button type="button" id="next" aria-label="Mês seguinte">›</button>
+          </div>
+          <div class="months" id="months"></div>
+          <div class="legend">
+            <span><i style="background:var(--surface);border:1px solid var(--line)"></i><span data-i="lg_free">Livre</span></span>
+            <span><i style="background:var(--booked)"></i><span data-i="lg_booked">Reservado</span></span>
+            <span><i style="background:var(--sea)"></i><span data-i="lg_sel">A sua escolha</span></span>
+          </div>
+        </div>
+        <aside class="pick" aria-live="polite">
+          <dl>
+            <div><dt data-i="ci">Entrada</dt><dd id="pickIn">—</dd></div>
+            <div><dt data-i="co">Saída</dt><dd id="pickOut">—</dd></div>
+          </dl>
+          <p class="nights" id="pickNights"></p>
+          <a class="btn btn-sun" href="#reservar" id="pickGo" data-i="pick_go">Pedir reserva para estas datas</a>
+          <button type="button" class="linkbtn" id="pickClear" data-i="pick_clear">Limpar datas</button>
+          <p class="upd" id="upd"></p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section id="reservar">
+    <div class="wrap book-grid">
+      <div class="book-side">
+        <span class="label" data-i="bk_l">Pedido de reserva</span>
+        <h2 data-i="bk_t">Fale diretamente connosco</h2>
+        <p data-i="bk_p">Reservar diretamente evita as comissões das plataformas. Envie o pedido e respondemos com o preço final para as suas datas.</p>
+        <ol class="steps">
+          <li data-i="st1">Envia o pedido com as datas e o número de pessoas.</li>
+          <li data-i="st2">Respondemos por e-mail com disponibilidade confirmada e preço.</li>
+          <li data-i="st3">A reserva fica garantida com o pagamento do sinal.</li>
+        </ol>
+      </div>
+      <form id="form" novalidate>
+        <div class="f"><label for="name" data-i="fl_name">Nome</label><input id="name" name="name" autocomplete="name" required></div>
+        <div class="f"><label for="email" data-i="fl_email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+        <div class="f"><label for="phone"><span data-i="fl_phone">Telefone</span> <small data-i="opt">(opcional)</small></label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+        <div class="f"><label for="guests" data-i="fl_guests">Hóspedes</label>
+          <select id="guests" name="guests"><option>1</option><option selected>2</option><option>3</option><option>4</option></select></div>
+        <div class="f"><label for="checkin" data-i="ci">Entrada</label><input id="checkin" name="checkin" type="date" required></div>
+        <div class="f"><label for="checkout" data-i="co">Saída</label><input id="checkout" name="checkout" type="date" required></div>
+        <div class="f full"><label for="message"><span data-i="fl_msg">Mensagem</span> <small data-i="opt">(opcional)</small></label><textarea id="message" name="message" data-ph="fl_msg_ph" placeholder="Hora prevista de chegada, crianças, berço, perguntas…"></textarea></div>
+        <div class="hp" aria-hidden="true"><label for="botcheck">Não preencher</label><input id="botcheck" name="botcheck" tabindex="-1" autocomplete="off"></div>
+        <label class="consent f full" for="consent"><input id="consent" type="checkbox" required><span data-i="consent">Aceito que os dados deste formulário sejam usados apenas para responder ao meu pedido.</span></label>
+        <div class="form-foot">
+          <span class="status" id="status" role="status"></span>
+          <button class="btn btn-sun" type="submit" id="send" data-i="send">Enviar pedido</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section id="localizacao" class="avail">
+    <div class="wrap loc">
+      <div class="addr">
+        <span class="label" data-i="lc_l">Localização</span>
+        <h2 data-i="lc_t">Entre a praia e a marina, no lado de Portimão</h2>
+        <address>Avenida das Comunidades Lusíadas, 1<br>8500-801 Portimão</address>
+        <p style="color:var(--ink-soft)" data-i="lc_p">Rua tranquila, a poucos minutos do passeio marítimo da Praia da Rocha. Supermercado, restaurantes e farmácia nas imediações.</p>
+        <div><a class="btn btn-ghost btn-sm" href="https://www.google.com/maps/search/?api=1&query=Avenida+das+Comunidades+Lusiadas+1+8500-801+Portimao" target="_blank" rel="noopener" data-i="lc_map">Abrir no Google Maps</a></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:24px">
+        <ul class="dist">
+          <li><span data-i="d1">Praia da Rocha</span><span>700 m</span></li>
+          <li><span data-i="d2">Marina de Portimão</span><span data-i="d_approx">≈ 1,3 km</span></li>
+          <li><span data-i="d3">Fortaleza de Santa Catarina</span><span>≈ 1,5 km</span></li>
+          <li><span data-i="d4">Praia dos Três Castelos</span><span>≈ 1,8 km</span></li>
+          <li><span data-i="d5">Centro de Portimão</span><span>≈ 2,5 km</span></li>
+          <li><span data-i="d6">Aeroporto de Faro</span><span>≈ 70 km</span></li>
+        </ul>
+        <div class="loc-photo"><img src="img/praia-da-rocha-aerea.jpg" alt="Vista aérea da Praia da Rocha e da marina de Portimão" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="img/logo.png" alt="" width="76" height="76">
+    <div class="cols">
+      <div><span class="label" data-i="ft_also">Também em</span>
+        <a href="https://www.airbnb.pt/rooms/746982117029526849" target="_blank" rel="noopener">Airbnb</a>
+        <a href="https://www.booking.com/hotel/pt/flh-portimao-modest-flat-with-terrace.html" target="_blank" rel="noopener">Booking.com</a></div>
+      <div><span class="label" data-i="ft_follow">Siga-nos</span>
+        <a href="https://www.facebook.com/bythebeachpraiadarocha" target="_blank" rel="noopener">Facebook</a></div>
+      <div><span class="label">AL</span><span>114540/AL</span></div>
+    </div>
+    <p class="credit"><span data-i="ft_credit">Fotografia aérea e site por</span> <a href="https://www.eagleviewportugal.com" target="_blank" rel="noopener">Eagle View</a></p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lb" hidden role="dialog" aria-modal="true" aria-label="Fotografia">
+  <img id="lbImg" alt="">
+  <button type="button" class="lb-close" id="lbClose" aria-label="Fechar">×</button>
+  <button type="button" class="lb-prev" id="lbPrev" aria-label="Anterior">‹</button>
+  <button type="button" class="lb-next" id="lbNext" aria-label="Seguinte">›</button>
+  <span class="lb-count" id="lbCount"></span>
+</div>
+
+<script id="fallback-availability" type="application/json">
+{"atualizado":"2026-11-05","ocupado":[{"de":"2026-11-01","ate":"2027-06-28"}]}
+</script>
+<script>
+/* ------------------------------------------------------------------
+   CONFIGURAÇÃO
+   WEB3FORMS_KEY: chave criada em web3forms.com com o e-mail
+   marco_fernandes@me.com. O e-mail nunca aparece no site; o
+   Web3Forms entrega os pedidos na caixa associada à chave.
+------------------------------------------------------------------- */
+const WEB3FORMS_KEY = "COLOCA_AQUI_A_CHAVE_WEB3FORMS";
+const AVAILABILITY_URL = "disponibilidade.json";
+
+const T = {
+pt:{nav_apt:"O apartamento",nav_photos:"Fotos",nav_avail:"Disponibilidade",nav_loc:"Localização",nav_book:"Reservar",
+hero_t:"Um T1 a sete minutos a pé da Praia da Rocha",hero_p:"Apartamento de férias em Portimão, num condomínio fechado com segurança 24 horas e estacionamento. Areal, restaurantes e marina, tudo a pé.",hero_c1:"Ver datas livres",hero_c2:"Ver fotografias",
+f_area:"de área útil",f_guests:"hóspedes no máximo",f_beds:"cama de casal e sofá-cama",f_bath:"casa de banho com banheira",f_terr_b:"Varanda",f_terr:"pequena, com jardim vertical",f_beach:"até ao areal",
+apt_l:"O apartamento",apt_t:"Sala com luz, quarto sossegado e uma pequena varanda para o fim do dia",
+apt_p1:"A sala abre-se para a cozinha e tem mesa de jantar para dois e um sofá de canto que se transforma em cama. O quarto tem cama de casal e porta direta para uma pequena varanda, onde cabem duas cadeiras e uma mesa baixa, com um jardim vertical que dá privacidade.",
+apt_p2:"A cozinha está equipada para refeições a sério: fogão, frigorífico com congelador, micro-ondas, torradeira, chaleira e máquina de lavar roupa. Roupa de cama e toalhas incluídas. Berço de viagem disponível a pedido.",
+am_t:"O que encontra",am1:"Wi-Fi",am2:"Televisão",am3:"Cozinha equipada",am4:"Máquina de lavar roupa",am5:"Banheira",am6:"Secador de cabelo",am7:"Ferro de engomar",am8:"Varanda mobilada",am9:"Estacionamento",am10:"Segurança 24 h",am11:"Roupa de cama e toalhas",am12:"Berço a pedido",al_l:"Registo de Alojamento Local",
+ph_l:"Fotografias",ph_t:"Cada divisão, tal como a vai encontrar",
+av_l:"Disponibilidade",av_t:"Escolha a data de entrada e a data de saída",av_p:"Os dias riscados já estão reservados. Toque num dia livre para a entrada e noutro para a saída; as datas passam para o pedido de reserva.",
+lg_free:"Livre",lg_booked:"Reservado",lg_sel:"A sua escolha",ci:"Entrada",co:"Saída",pick_go:"Pedir reserva para estas datas",pick_clear:"Limpar datas",
+pick_hint:"Escolha o dia de entrada no calendário.",pick_hint2:"Agora escolha o dia de saída.",nights1:"noite",nightsN:"noites",clash:"Há noites reservadas pelo meio. Escolha outro período.",upd:"Calendário atualizado a",
+bk_l:"Pedido de reserva",bk_t:"Fale diretamente connosco",bk_p:"Reservar diretamente evita as comissões das plataformas. Envie o pedido e respondemos com o preço final para as suas datas.",
+st1:"Envia o pedido com as datas e o número de pessoas.",st2:"Respondemos por e-mail com disponibilidade confirmada e preço.",st3:"A reserva fica garantida com o pagamento do sinal.",
+fl_name:"Nome",fl_email:"E-mail",fl_phone:"Telefone",opt:"(opcional)",fl_guests:"Hóspedes",fl_msg:"Mensagem",fl_msg_ph:"Hora prevista de chegada, crianças, berço, perguntas…",
+consent:"Aceito que os dados deste formulário sejam usados apenas para responder ao meu pedido.",send:"Enviar pedido",sending:"A enviar…",
+e_req:"Preencha o nome, o e-mail e as datas.",e_mail:"O e-mail não parece válido. Confirme o endereço.",e_dates:"A data de saída tem de ser depois da data de entrada.",e_consent:"Falta aceitar o uso dos dados para responder ao pedido.",e_busy:"Esse período inclui noites já reservadas. Escolha outras datas no calendário.",e_net:"O pedido não foi enviado. Verifique a ligação e tente outra vez.",
+ok_t:"Pedido recebido",ok_p:"Obrigado. Respondemos para o e-mail que indicou, normalmente no próprio dia.",demo:"Pré-visualização: o envio fica ativo quando a chave do formulário for configurada.",
+lc_l:"Localização",lc_t:"Entre a praia e a marina, no lado de Portimão",lc_p:"Rua tranquila, a poucos minutos do passeio marítimo da Praia da Rocha. Supermercado, restaurantes e farmácia nas imediações.",lc_map:"Abrir no Google Maps",
+d1:"Praia da Rocha",d2:"Marina de Portimão",d3:"Fortaleza de Santa Catarina",d4:"Praia dos Três Castelos",d5:"Centro de Portimão",d6:"Aeroporto de Faro",d_approx:"≈ 1,3 km",
+ft_also:"Também em",ft_follow:"Siga-nos",ft_credit:"Fotografia aérea e site por",
+cap:["Sala","Sala e cozinha","Varanda","Quarto","Cozinha","Zona de refeições","Quarto","Varanda à noite"],subj:"Pedido de reserva"},
+en:{nav_apt:"The apartment",nav_photos:"Photos",nav_avail:"Availability",nav_loc:"Location",nav_book:"Book",
+hero_t:"A one-bedroom flat a seven-minute walk from Praia da Rocha",hero_p:"Holiday apartment in Portimão, in a gated complex with 24-hour security and parking. Beach, restaurants and marina all within walking distance.",hero_c1:"See free dates",hero_c2:"See photos",
+f_area:"of living space",f_guests:"guests maximum",f_beds:"double bed and sofa bed",f_bath:"bathroom with bathtub",f_terr_b:"Balcony",f_terr:"small, with a green wall",f_beach:"to the sand",
+apt_l:"The apartment",apt_t:"A bright living room, a quiet bedroom and a small balcony for the evening",
+apt_p1:"The living room opens onto the kitchen, with a dining table for two and a corner sofa that becomes a bed. The bedroom has a double bed and opens straight onto a small balcony with room for two chairs and a low table, and a green wall for privacy.",
+apt_p2:"The kitchen is set up for proper meals: hob, fridge-freezer, microwave, toaster, kettle and washing machine. Bed linen and towels included. Travel cot available on request.",
+am_t:"What you'll find",am1:"Wi-Fi",am2:"TV",am3:"Equipped kitchen",am4:"Washing machine",am5:"Bathtub",am6:"Hair dryer",am7:"Iron",am8:"Furnished balcony",am9:"Parking",am10:"24 h security",am11:"Bed linen and towels",am12:"Cot on request",al_l:"Local Lodging registration",
+ph_l:"Photos",ph_t:"Every room, exactly as you'll find it",
+av_l:"Availability",av_t:"Pick your arrival and departure dates",av_p:"Crossed-out days are already booked. Tap a free day for arrival and another for departure; the dates carry over to the booking request.",
+lg_free:"Free",lg_booked:"Booked",lg_sel:"Your dates",ci:"Arrival",co:"Departure",pick_go:"Request these dates",pick_clear:"Clear dates",
+pick_hint:"Pick your arrival day on the calendar.",pick_hint2:"Now pick your departure day.",nights1:"night",nightsN:"nights",clash:"Some nights in between are booked. Pick another period.",upd:"Calendar updated on",
+bk_l:"Booking request",bk_t:"Book directly with us",bk_p:"Booking direct avoids platform fees. Send your request and we'll reply with the final price for your dates.",
+st1:"Send your request with dates and number of guests.",st2:"We reply by email with confirmed availability and price.",st3:"Your booking is secured once the deposit is paid.",
+fl_name:"Name",fl_email:"Email",fl_phone:"Phone",opt:"(optional)",fl_guests:"Guests",fl_msg:"Message",fl_msg_ph:"Expected arrival time, children, cot, questions…",
+consent:"I agree that the details in this form are used only to reply to my request.",send:"Send request",sending:"Sending…",
+e_req:"Please fill in your name, email and dates.",e_mail:"That email doesn't look right. Please check it.",e_dates:"Departure must be after arrival.",e_consent:"Please agree to the use of your details so we can reply.",e_busy:"That period includes booked nights. Please pick other dates on the calendar.",e_net:"The request wasn't sent. Check your connection and try again.",
+ok_t:"Request received",ok_p:"Thank you. We'll reply to the email you gave, usually the same day.",demo:"Preview: sending goes live once the form key is set up.",
+lc_l:"Location",lc_t:"Between the beach and the marina, on the Portimão side",lc_p:"A quiet street a few minutes from the Praia da Rocha promenade. Supermarket, restaurants and pharmacy nearby.",lc_map:"Open in Google Maps",
+d1:"Praia da Rocha beach",d2:"Portimão Marina",d3:"Santa Catarina Fortress",d4:"Três Castelos beach",d5:"Portimão town centre",d6:"Faro Airport",d_approx:"≈ 1.3 km",
+ft_also:"Also on",ft_follow:"Follow us",ft_credit:"Aerial photo and website by",
+cap:["Living room","Living room and kitchen","Balcony","Bedroom","Kitchen","Dining area","Bedroom","Balcony at night"],subj:"Booking request"},
+es:{nav_apt:"El apartamento",nav_photos:"Fotos",nav_avail:"Disponibilidad",nav_loc:"Ubicación",nav_book:"Reservar",
+hero_t:"Un apartamento de un dormitorio a siete minutos a pie de la Praia da Rocha",hero_p:"Apartamento vacacional en Portimão, en un complejo cerrado con seguridad 24 horas y aparcamiento. Playa, restaurantes y puerto deportivo, todo a pie.",hero_c1:"Ver fechas libres",hero_c2:"Ver fotos",
+f_area:"de superficie",f_guests:"huéspedes como máximo",f_beds:"cama doble y sofá cama",f_bath:"baño con bañera",f_terr_b:"Balcón",f_terr:"pequeño, con jardín vertical",f_beach:"hasta la arena",
+apt_l:"El apartamento",apt_t:"Salón luminoso, dormitorio tranquilo y un pequeño balcón para el final del día",
+apt_p1:"El salón se abre a la cocina, con mesa de comedor para dos y un sofá rinconero que se convierte en cama. El dormitorio tiene cama doble y salida directa a un pequeño balcón con sitio para dos sillones y una mesa baja, y un jardín vertical que da intimidad.",
+apt_p2:"La cocina está equipada para cocinar de verdad: placa, frigorífico con congelador, microondas, tostadora, hervidor y lavadora. Ropa de cama y toallas incluidas. Cuna de viaje bajo petición.",
+am_t:"Qué encontrará",am1:"Wi-Fi",am2:"Televisión",am3:"Cocina equipada",am4:"Lavadora",am5:"Bañera",am6:"Secador de pelo",am7:"Plancha",am8:"Balcón amueblado",am9:"Aparcamiento",am10:"Seguridad 24 h",am11:"Ropa de cama y toallas",am12:"Cuna bajo petición",al_l:"Registro de Alojamiento Local",
+ph_l:"Fotos",ph_t:"Cada estancia, tal como la encontrará",
+av_l:"Disponibilidad",av_t:"Elija la fecha de llegada y la de salida",av_p:"Los días tachados ya están reservados. Toque un día libre para la llegada y otro para la salida; las fechas pasan a la solicitud de reserva.",
+lg_free:"Libre",lg_booked:"Reservado",lg_sel:"Sus fechas",ci:"Llegada",co:"Salida",pick_go:"Solicitar estas fechas",pick_clear:"Borrar fechas",
+pick_hint:"Elija el día de llegada en el calendario.",pick_hint2:"Ahora elija el día de salida.",nights1:"noche",nightsN:"noches",clash:"Hay noches reservadas en medio. Elija otro periodo.",upd:"Calendario actualizado el",
+bk_l:"Solicitud de reserva",bk_t:"Reserve directamente con nosotros",bk_p:"Reservar directamente evita las comisiones de las plataformas. Envíe la solicitud y le respondemos con el precio final para sus fechas.",
+st1:"Envía la solicitud con las fechas y el número de personas.",st2:"Respondemos por correo con la disponibilidad confirmada y el precio.",st3:"La reserva queda confirmada con el pago de la señal.",
+fl_name:"Nombre",fl_email:"Correo electrónico",fl_phone:"Teléfono",opt:"(opcional)",fl_guests:"Huéspedes",fl_msg:"Mensaje",fl_msg_ph:"Hora prevista de llegada, niños, cuna, preguntas…",
+consent:"Acepto que los datos de este formulario se usen solo para responder a mi solicitud.",send:"Enviar solicitud",sending:"Enviando…",
+e_req:"Rellene el nombre, el correo y las fechas.",e_mail:"El correo no parece válido. Revíselo.",e_dates:"La salida debe ser posterior a la llegada.",e_consent:"Falta aceptar el uso de los datos para responder a la solicitud.",e_busy:"Ese periodo incluye noches reservadas. Elija otras fechas en el calendario.",e_net:"La solicitud no se ha enviado. Compruebe la conexión e inténtelo de nuevo.",
+ok_t:"Solicitud recibida",ok_p:"Gracias. Le responderemos al correo indicado, normalmente el mismo día.",demo:"Vista previa: el envío se activa cuando se configure la clave del formulario.",
+lc_l:"Ubicación",lc_t:"Entre la playa y el puerto deportivo, del lado de Portimão",lc_p:"Calle tranquila a pocos minutos del paseo marítimo de la Praia da Rocha. Supermercado, restaurantes y farmacia cerca.",lc_map:"Abrir en Google Maps",
+d1:"Praia da Rocha",d2:"Puerto deportivo de Portimão",d3:"Fortaleza de Santa Catarina",d4:"Playa dos Três Castelos",d5:"Centro de Portimão",d6:"Aeropuerto de Faro",d_approx:"≈ 1,3 km",
+ft_also:"También en",ft_follow:"Síganos",ft_credit:"Fotografía aérea y web por",
+cap:["Salón","Salón y cocina","Balcón","Dormitorio","Cocina","Comedor","Dormitorio","Balcón de noche"],subj:"Solicitud de reserva"}
+};
+const LOCALES={pt:"pt-PT",en:"en-GB",es:"es-ES"};
+let lang="pt";
+try{const s=localStorage.getItem("btb-lang");if(T[s])lang=s;else{const n=(navigator.language||"pt").slice(0,2);if(T[n])lang=n;}}catch(e){const n=(navigator.language||"pt").slice(0,2);if(T[n])lang=n;}
+const t=k=>T[lang][k]??T.pt[k]??k;
+const $=id=>document.getElementById(id);
+
+/* ---------- gallery ---------- */
+const PHOTOS=["sala-jantar","sala-cozinha","varanda","quarto","cozinha","sala","quarto-2","varanda-noite"];
+const gal=$("gallery");
+function renderGallery(){
+  gal.innerHTML="";
+  PHOTOS.forEach((p,i)=>{
+    const b=document.createElement("button");b.type="button";
+    b.className=i===0?"g1":(i===1?"g2":"");
+    b.setAttribute("aria-label",t("cap")[i]);
+    b.innerHTML=`<img src="img/${p}.jpg" alt="${t("cap")[i]}" loading="${i<3?"eager":"lazy"}"><span class="cap">${t("cap")[i]}</span>`;
+    b.addEventListener("click",()=>openLb(i));gal.appendChild(b);
+  });
+}
+let lbI=0;const lb=$("lb");
+function showLb(){$("lbImg").src=`img/${PHOTOS[lbI]}.jpg`;$("lbImg").alt=t("cap")[lbI];$("lbCount").textContent=`${lbI+1} / ${PHOTOS.length} · ${t("cap")[lbI]}`;}
+function openLb(i){lbI=i;showLb();lb.hidden=false;$("lbClose").focus();document.body.style.overflow="hidden";}
+function closeLb(){lb.hidden=true;document.body.style.overflow="";gal.children[lbI]?.focus();}
+$("lbClose").onclick=closeLb;
+$("lbPrev").onclick=()=>{lbI=(lbI+PHOTOS.length-1)%PHOTOS.length;showLb();};
+$("lbNext").onclick=()=>{lbI=(lbI+1)%PHOTOS.length;showLb();};
+lb.addEventListener("click",e=>{if(e.target===lb)closeLb();});
+document.addEventListener("keydown",e=>{if(lb.hidden)return;if(e.key==="Escape")closeLb();if(e.key==="ArrowLeft")$("lbPrev").click();if(e.key==="ArrowRight")$("lbNext").click();});
+let tx=0;lb.addEventListener("touchstart",e=>{tx=e.touches[0].clientX},{passive:true});
+lb.addEventListener("touchend",e=>{const d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>50)(d>0?$("lbPrev"):$("lbNext")).click();});
+
+/* ---------- availability calendar ---------- */
+const iso=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+const parse=s=>{const[y,m,d]=s.split("-").map(Number);return new Date(y,m-1,d);};
+const addDays=(d,n)=>new Date(d.getFullYear(),d.getMonth(),d.getDate()+n);
+const today=new Date();today.setHours(0,0,0,0);
+let booked=new Set(), updated="", view=new Date(today.getFullYear(),today.getMonth(),1), selIn=null, selOut=null, clash=false;
+const MAX_MONTHS=18;
+function loadAvailability(data){
+  booked=new Set();updated=data.atualizado||"";
+  (data.ocupado||[]).forEach(r=>{for(let d=parse(r.de);d<parse(r.ate);d=addDays(d,1))booked.add(iso(d));});
+}
+function nightsFree(a,b){for(let d=a;d<b;d=addDays(d,1))if(booked.has(iso(d)))return false;return true;}
+function fmt(d,opt){return d?new Intl.DateTimeFormat(LOCALES[lang],opt||{day:"numeric",month:"short",year:"numeric"}).format(d):"—";}
+function renderCal(){
+  const box=$("months");box.innerHTML="";
+  const dows=[...Array(7)].map((_,i)=>new Intl.DateTimeFormat(LOCALES[lang],{weekday:"short"}).format(new Date(2024,0,1+i)).replace(".",""));
+  for(let m=0;m<2;m++){
+    const first=new Date(view.getFullYear(),view.getMonth()+m,1);
+    const wrap=document.createElement("div");wrap.className="month";
+    wrap.innerHTML=`<h3>${fmt(first,{month:"long",year:"numeric"})}</h3>`;
+    const g=document.createElement("div");g.className="grid7";
+    dows.forEach(d=>{const s=document.createElement("span");s.className="dow";s.textContent=d;g.appendChild(s);});
+    const lead=(first.getDay()+6)%7;for(let i=0;i<lead;i++)g.appendChild(document.createElement("span"));
+    const days=new Date(first.getFullYear(),first.getMonth()+1,0).getDate();
+    for(let n=1;n<=days;n++){
+      const d=new Date(first.getFullYear(),first.getMonth(),n),k=iso(d);
+      const b=document.createElement("button");b.type="button";b.className="day";b.textContent=n;
+      const past=d<today,isB=booked.has(k);
+      // a booked night can still be someone's departure day
+      const canOut=selIn&&!selOut&&d>selIn&&nightsFree(selIn,d);
+      if(past){b.classList.add("past");b.disabled=true;}
+      else if(isB){b.classList.add("booked");if(!canOut)b.disabled=true;}
+      if(+d===+today)b.classList.add("today");
+      if(selIn&&+d===+selIn||selOut&&+d===+selOut)b.classList.add("sel");
+      else if(selIn&&selOut&&d>selIn&&d<selOut)b.classList.add("in-range");
+      b.setAttribute("aria-label",fmt(d,{weekday:"long",day:"numeric",month:"long"})+(isB?" · "+t("lg_booked"):""));
+      b.addEventListener("click",()=>pickDay(d));
+      g.appendChild(b);
+    }
+    wrap.appendChild(g);box.appendChild(wrap);
+  }
+  const last=new Date(view.getFullYear(),view.getMonth()+1,1);
+  $("calRange").textContent=fmt(view,{month:"short"})+" – "+fmt(last,{month:"short",year:"numeric"});
+  $("prev").disabled=view<=new Date(today.getFullYear(),today.getMonth(),1);
+  $("next").disabled=(view.getFullYear()-today.getFullYear())*12+view.getMonth()-today.getMonth()>=MAX_MONTHS;
+  renderPick();
+}
+function pickDay(d){
+  clash=false;
+  if(!selIn||selOut||d<=selIn){
+    if(booked.has(iso(d)))return;
+    selIn=d;selOut=null;
+  }else{
+    if(!nightsFree(selIn,d)){clash=true;}
+    else selOut=d;
+  }
+  syncForm();renderCal();
+}
+function renderPick(){
+  $("pickIn").textContent=fmt(selIn);$("pickOut").textContent=fmt(selOut);
+  const n=selIn&&selOut?Math.round((selOut-selIn)/864e5):0;
+  const el=$("pickNights");el.className="nights";
+  if(clash){el.textContent=t("clash");el.className="warn";}
+  else el.textContent=n?`${n} ${n===1?t("nights1"):t("nightsN")}`:(selIn?t("pick_hint2"):t("pick_hint"));
+  $("pickGo").hidden=!n;$("pickClear").hidden=!selIn;
+  $("upd").textContent=updated?`${t("upd")} ${fmt(parse(updated),{day:"numeric",month:"long",year:"numeric"})}.`:"";
+}
+function syncForm(){$("checkin").value=selIn?iso(selIn):"";$("checkout").value=selOut?iso(selOut):"";}
+$("prev").onclick=()=>{view=new Date(view.getFullYear(),view.getMonth()-1,1);renderCal();};
+$("next").onclick=()=>{view=new Date(view.getFullYear(),view.getMonth()+1,1);renderCal();};
+$("pickClear").onclick=()=>{selIn=selOut=null;clash=false;syncForm();renderCal();};
+["checkin","checkout"].forEach(id=>$(id).addEventListener("change",()=>{
+  const a=$("checkin").value,b=$("checkout").value;selIn=a?parse(a):null;selOut=b?parse(b):null;
+  if(selIn&&selOut&&selOut<=selIn)selOut=null;if(selIn)view=new Date(selIn.getFullYear(),selIn.getMonth(),1);renderCal();
+}));
+$("checkin").min=iso(today);$("checkout").min=iso(addDays(today,1));
+
+/* ---------- booking form ---------- */
+const form=$("form"),stat=$("status");
+function err(k){stat.className="status err";stat.textContent=t(k);}
+form.addEventListener("submit",async e=>{
+  e.preventDefault();
+  if($("botcheck").value)return;
+  const name=$("name").value.trim(),email=$("email").value.trim(),ci=$("checkin").value,co=$("checkout").value;
+  if(!name||!email||!ci||!co)return err("e_req");
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email))return err("e_mail");
+  if(parse(co)<=parse(ci))return err("e_dates");
+  if(!nightsFree(parse(ci),parse(co)))return err("e_busy");
+  if(!$("consent").checked)return err("e_consent");
+  const nights=Math.round((parse(co)-parse(ci))/864e5);
+  if(WEB3FORMS_KEY.startsWith("COLOCA")){stat.className="status ok";stat.textContent=t("demo");return;}
+  const btn=$("send");btn.disabled=true;btn.textContent=t("sending");stat.textContent="";
+  try{
+    const r=await fetch("https://api.web3forms.com/submit",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},
+      body:JSON.stringify({access_key:WEB3FORMS_KEY,subject:`${T.pt.subj}: ${ci} → ${co} · ${name}`,from_name:"By the Beach · site",replyto:email,
+        Nome:name,Email:email,Telefone:$("phone").value.trim()||"—",Entrada:ci,Saida:co,Noites:nights,Hospedes:$("guests").value,Idioma:lang.toUpperCase(),Mensagem:$("message").value.trim()||"—",botcheck:""})});
+    const j=await r.json().catch(()=>({}));
+    if(!r.ok||j.success===false)throw new Error();
+    form.innerHTML=`<div class="sent"><span class="label">${fmt(parse(ci))} → ${fmt(parse(co))}</span><h3>${t("ok_t")}</h3><p>${t("ok_p")}</p></div>`;
+  }catch(_){btn.disabled=false;btn.textContent=t("send");err("e_net");}
+});
+
+/* ---------- language ---------- */
+function applyLang(){
+  document.documentElement.lang=LOCALES[lang];
+  document.querySelectorAll("[data-i]").forEach(el=>{el.textContent=t(el.dataset.i);});
+  document.querySelectorAll("[data-ph]").forEach(el=>{el.placeholder=t(el.dataset.ph);});
+  document.querySelectorAll("[data-lang]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.lang===lang));
+  renderGallery();renderCal();
+  if(stat.textContent)stat.textContent="";
+}
+document.querySelectorAll("[data-lang]").forEach(b=>b.addEventListener("click",()=>{lang=b.dataset.lang;try{localStorage.setItem("btb-lang",lang)}catch(e){}applyLang();}));
+
+loadAvailability(JSON.parse($("fallback-availability").textContent));
+applyLang();
+fetch(AVAILABILITY_URL,{cache:"no-store"}).then(r=>r.ok?r.json():Promise.reject()).then(d=>{loadAvailability(d);renderCal();}).catch(()=>{});
+</script>
+</body>
+</html>
