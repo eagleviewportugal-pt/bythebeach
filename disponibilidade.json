@@ -2,6 +2,10 @@
   "atualizado": "2026-11-05",
   "nota": "Datas ocupadas. 'de' = primeira noite ocupada, 'ate' = dia de saída (fica livre para nova entrada). Edita à mão ou deixa a sincronização automática tratar das reservas do Airbnb/Booking.",
   "ocupado": [
-    { "de": "2026-11-01", "ate": "2027-06-28", "origem": "flh" }
+    {
+      "de": "2026-09-05",
+      "ate": "2027-06-28",
+      "origem": "flh"
+    }
   ]
 }
