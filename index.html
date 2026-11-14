@@ -155,6 +155,17 @@ section{padding-block:clamp(64px,9vw,112px)}
   .sbar .btn{flex:none}
   footer{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))!important}
 }
+/* apartment video */
+.vrow{display:flex;justify-content:center;margin-top:28px}
+.vbtn{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:12px;padding:12px 22px 12px 14px;border:1px solid var(--line);border-radius:999px;font-weight:500;color:var(--ink);transition:background .2s}
+.vbtn:hover{background:var(--sea-wash)}
+.vbtn:focus-visible{outline:2px solid var(--sea);outline-offset:3px}
+.vplay{width:34px;height:34px;border-radius:50%;background:var(--sea);position:relative;flex:none}
+.vplay::after{content:"";position:absolute;left:13px;top:10px;border-style:solid;border-width:7px 0 7px 11px;border-color:transparent transparent transparent #fff}
+.vmodal{position:fixed;inset:0;z-index:60;background:rgba(5,16,18,.94);display:flex;align-items:center;justify-content:center;padding:max(56px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(56px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.vmodal .vframe{width:min(1200px,100%,calc((100vh - 140px)*16/9));aspect-ratio:16/9;background:#000;border-radius:4px;overflow:hidden}
+.vmodal iframe{width:100%;height:100%;border:0;display:block}
+.vmodal .vclose{position:absolute;top:calc(12px + env(safe-area-inset-top,0px));right:calc(12px + env(safe-area-inset-right,0px));background:rgba(255,255,255,.1);color:#fff;border:0;width:46px;height:46px;border-radius:50%;font-size:1.4rem;cursor:pointer}
 /* gallery */
 .gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:clamp(220px,30vw,460px);gap:14px}
 .gallery button{all:unset;cursor:zoom-in;position:relative;overflow:hidden;border-radius:4px;background:var(--sea-wash)}
@@ -343,6 +354,7 @@ footer .credit{font-size:.8rem;opacity:.65;text-align:right;max-width:24ch}
         <h2 data-i="ph_t">Cada divisão, tal como a vai encontrar</h2>
       </div>
       <div class="gallery" id="gallery"></div>
+      <div class="vrow"><button type="button" class="vbtn" id="vOpen"><span class="vplay" aria-hidden="true"></span><span data-i="vid_b">Ver o vídeo do apartamento</span></button></div>
     </div>
   </section>
 
@@ -459,6 +471,7 @@ footer .credit{font-size:.8rem;opacity:.65;text-align:right;max-width:24ch}
 </footer>
 
 <div class="sbar" id="sbar"><span data-i="sb_t">Reserva direta, sem comissões</span><a class="btn btn-sun btn-sm" href="#reservar" data-i="sb_b">Ver datas e reservar</a></div>
+<div class="vmodal" id="vModal" hidden role="dialog" aria-modal="true" aria-label="Vídeo"><div class="vframe" id="vFrame"></div><button type="button" class="vclose" id="vClose" aria-label="Fechar">×</button></div>
 <div class="lightbox" id="lb" hidden role="dialog" aria-modal="true" aria-label="Fotografia">
   <img id="lbImg" alt="">
   <button type="button" class="lb-close" id="lbClose" aria-label="Fechar">×</button>
@@ -481,7 +494,7 @@ const WEB3FORMS_KEY = "84d9ae42-f320-4b61-aaea-7b4e9ee98248";
 const AVAILABILITY_URL = "disponibilidade.json";
 
 const T = {
-pt:{sb_t:"Reserva direta, sem comissões",sb_b:"Ver datas e reservar",lc1:"Condomínio Clube Praia da Rocha III",lc2:"Praia da Rocha",lc3:"Praia dos Três Castelos",lc4:"Portimão, o rio e a marina",lc5:"Praia da Rocha e a marina",hero_k:"Praia da Rocha · Portimão",chip1:"Reserva direta, sem comissões",chip2:"Até 4 hóspedes",chip3:"Estacionamento incluído",q_go:"Ver disponibilidade",nav_apt:"O apartamento",nav_photos:"Fotos",nav_avail:"Disponibilidade",nav_loc:"Localização",nav_book:"Reservar",
+pt:{vid_b:"Ver o vídeo do apartamento",sb_t:"Reserva direta, sem comissões",sb_b:"Ver datas e reservar",lc1:"Condomínio Clube Praia da Rocha III",lc2:"Praia da Rocha",lc3:"Praia dos Três Castelos",lc4:"Portimão, o rio e a marina",lc5:"Praia da Rocha e a marina",hero_k:"Praia da Rocha · Portimão",chip1:"Reserva direta, sem comissões",chip2:"Até 4 hóspedes",chip3:"Estacionamento incluído",q_go:"Ver disponibilidade",nav_apt:"O apartamento",nav_photos:"Fotos",nav_avail:"Disponibilidade",nav_loc:"Localização",nav_book:"Reservar",
 hero_t:"Um T1 a sete minutos a pé da Praia da Rocha",hero_p:"Apartamento de férias em Portimão, num condomínio fechado com segurança 24 horas e estacionamento. Areal, restaurantes e marina, tudo a pé.",hero_c1:"Ver datas livres",hero_c2:"Ver fotografias",
 f_area:"de área útil",f_guests:"hóspedes no máximo",f_beds:"cama de casal e sofá-cama",f_bath:"casa de banho com banheira",f_terr_b:"Varanda",f_terr:"pequena, com jardim vertical",f_beach:"até ao areal",
 apt_l:"O apartamento",apt_t:"Sala com luz, quarto sossegado e uma pequena varanda para o fim do dia",
@@ -502,7 +515,7 @@ lc_l:"Localização",lc_t:"Entre a praia e a marina, no lado de Portimão",lc_p:
 d1:"Praia da Rocha",d2:"Marina de Portimão",d3:"Fortaleza de Santa Catarina",d4:"Praia dos Três Castelos",d5:"Centro de Portimão",d6:"Aeroporto de Faro",d_approx:"≈ 1,3 km",
 ft_also:"Também em",ft_follow:"Siga-nos",ft_credit:"Fotografia aérea e site por",
 cap:["Sala","Sala e cozinha","Varanda","Quarto","Cozinha","Zona de refeições","Quarto","Varanda à noite"],subj:"Pedido de reserva"},
-en:{sb_t:"Book direct, no platform fees",sb_b:"See dates & book",lc1:"Clube Praia da Rocha III complex",lc2:"Praia da Rocha",lc3:"Três Castelos beach",lc4:"Portimão, the river and the marina",lc5:"Praia da Rocha and the marina",hero_k:"Praia da Rocha · Portimão",chip1:"Book direct, no platform fees",chip2:"Up to 4 guests",chip3:"Parking included",q_go:"Check availability",nav_apt:"The apartment",nav_photos:"Photos",nav_avail:"Availability",nav_loc:"Location",nav_book:"Book",
+en:{vid_b:"Watch the apartment video",sb_t:"Book direct, no platform fees",sb_b:"See dates & book",lc1:"Clube Praia da Rocha III complex",lc2:"Praia da Rocha",lc3:"Três Castelos beach",lc4:"Portimão, the river and the marina",lc5:"Praia da Rocha and the marina",hero_k:"Praia da Rocha · Portimão",chip1:"Book direct, no platform fees",chip2:"Up to 4 guests",chip3:"Parking included",q_go:"Check availability",nav_apt:"The apartment",nav_photos:"Photos",nav_avail:"Availability",nav_loc:"Location",nav_book:"Book",
 hero_t:"A one-bedroom flat a seven-minute walk from Praia da Rocha",hero_p:"Holiday apartment in Portimão, in a gated complex with 24-hour security and parking. Beach, restaurants and marina all within walking distance.",hero_c1:"See free dates",hero_c2:"See photos",
 f_area:"of living space",f_guests:"guests maximum",f_beds:"double bed and sofa bed",f_bath:"bathroom with bathtub",f_terr_b:"Balcony",f_terr:"small, with a green wall",f_beach:"to the sand",
 apt_l:"The apartment",apt_t:"A bright living room, a quiet bedroom and a small balcony for the evening",
@@ -523,7 +536,7 @@ lc_l:"Location",lc_t:"Between the beach and the marina, on the Portimão side",l
 d1:"Praia da Rocha beach",d2:"Portimão Marina",d3:"Santa Catarina Fortress",d4:"Três Castelos beach",d5:"Portimão town centre",d6:"Faro Airport",d_approx:"≈ 1.3 km",
 ft_also:"Also on",ft_follow:"Follow us",ft_credit:"Aerial photo and website by",
 cap:["Living room","Living room and kitchen","Balcony","Bedroom","Kitchen","Dining area","Bedroom","Balcony at night"],subj:"Booking request"},
-es:{sb_t:"Reserva directa, sin comisiones",sb_b:"Ver fechas y reservar",lc1:"Complejo Clube Praia da Rocha III",lc2:"Praia da Rocha",lc3:"Playa de Três Castelos",lc4:"Portimão, el río y el puerto deportivo",lc5:"Praia da Rocha y el puerto deportivo",hero_k:"Praia da Rocha · Portimão",chip1:"Reserva directa, sin comisiones",chip2:"Hasta 4 huéspedes",chip3:"Aparcamiento incluido",q_go:"Ver disponibilidad",nav_apt:"El apartamento",nav_photos:"Fotos",nav_avail:"Disponibilidad",nav_loc:"Ubicación",nav_book:"Reservar",
+es:{vid_b:"Ver el vídeo del apartamento",sb_t:"Reserva directa, sin comisiones",sb_b:"Ver fechas y reservar",lc1:"Complejo Clube Praia da Rocha III",lc2:"Praia da Rocha",lc3:"Playa de Três Castelos",lc4:"Portimão, el río y el puerto deportivo",lc5:"Praia da Rocha y el puerto deportivo",hero_k:"Praia da Rocha · Portimão",chip1:"Reserva directa, sin comisiones",chip2:"Hasta 4 huéspedes",chip3:"Aparcamiento incluido",q_go:"Ver disponibilidad",nav_apt:"El apartamento",nav_photos:"Fotos",nav_avail:"Disponibilidad",nav_loc:"Ubicación",nav_book:"Reservar",
 hero_t:"Un apartamento de un dormitorio a siete minutos a pie de la Praia da Rocha",hero_p:"Apartamento vacacional en Portimão, en un complejo cerrado con seguridad 24 horas y aparcamiento. Playa, restaurantes y puerto deportivo, todo a pie.",hero_c1:"Ver fechas libres",hero_c2:"Ver fotos",
 f_area:"de superficie",f_guests:"huéspedes como máximo",f_beds:"cama doble y sofá cama",f_bath:"baño con bañera",f_terr_b:"Balcón",f_terr:"pequeño, con jardín vertical",f_beach:"hasta la arena",
 apt_l:"El apartamento",apt_t:"Salón luminoso, dormitorio tranquilo y un pequeño balcón para el final del día",
@@ -744,6 +757,19 @@ fetch(AVAILABILITY_URL,{cache:"no-store"}).then(r=>r.ok?r.json():Promise.reject(
   function upd(){bar.classList.toggle('on',!heroIn&&!formIn)}
   new IntersectionObserver(function(e){heroIn=e[0].isIntersecting;upd()}).observe(hero);
   new IntersectionObserver(function(e){formIn=e[0].isIntersecting;upd()},{rootMargin:'0px 0px -30% 0px'}).observe(form);
+})();
+
+/* ---------- apartment video (YouTube, loads only on click) ---------- */
+(function(){
+  var m=$("vModal"),f=$("vFrame"),o=$("vOpen"); if(!m||!o) return;
+  function close(){m.hidden=true;f.innerHTML="";document.body.style.overflow="";o.focus();}
+  o.addEventListener("click",function(){
+    f.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/nQ-zt366-dY?autoplay=1&rel=0&modestbranding=1&playsinline=1" title="By the Beach" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+    m.hidden=false;document.body.style.overflow="hidden";$("vClose").focus();
+  });
+  $("vClose").addEventListener("click",close);
+  m.addEventListener("click",function(e){if(e.target===m)close();});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!m.hidden)close();});
 })();
 </script>
 </body>
