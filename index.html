@@ -142,15 +142,28 @@ section{padding-block:clamp(64px,9vw,112px)}
 @media (max-width:860px){.apt{grid-template-columns:1fr}}
 @media (max-width:420px){.amen ul{grid-template-columns:1fr}}
 
+
+/* sticky booking bar (phones) */
+.sbar{display:none}
+@media (max-width:760px){
+  .sbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:30;align-items:center;gap:12px;
+    padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));
+    background:color-mix(in srgb,var(--salt) 94%,transparent);backdrop-filter:blur(10px);border-top:1px solid var(--line);
+    transform:translateY(110%);transition:transform .35s ease}
+  .sbar.on{transform:none}
+  .sbar span{flex:1;min-width:0;font-size:.85rem;color:var(--ink-soft);line-height:1.3}
+  .sbar .btn{flex:none}
+  footer{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))!important}
+}
 /* gallery */
-.gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:clamp(150px,17vw,230px);gap:10px}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:clamp(220px,30vw,460px);gap:14px}
 .gallery button{all:unset;cursor:zoom-in;position:relative;overflow:hidden;border-radius:4px;background:var(--sea-wash)}
 .gallery button:focus-visible{outline:2px solid var(--sea);outline-offset:3px}
 .gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
 .gallery button:hover img{transform:scale(1.035)}
 .gallery .cap{position:absolute;left:10px;bottom:10px;font:500 .7rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#fff;background:rgba(8,32,36,.55);padding:4px 8px;border-radius:3px}
-.g1{grid-column:span 2;grid-row:span 2}.g2{grid-row:span 2}
-@media (max-width:760px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:150px}.g2{grid-row:span 1}}
+.g1{grid-column:span 2;grid-row:span 2}.gw{grid-column:span 2}
+@media (max-width:760px){.gallery{grid-auto-rows:190px;gap:8px}.g1{grid-row:span 1}}
 .lightbox{position:fixed;inset:0;z-index:50;background:rgba(5,16,18,.94);display:flex;align-items:center;justify-content:center;padding:max(56px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(56px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
 .lightbox img{max-height:100%;max-width:min(1400px,100%);object-fit:contain;border-radius:3px}
 .lightbox button{position:absolute;background:rgba(255,255,255,.1);color:#fff;border:0;width:46px;height:46px;border-radius:50%;font-size:1.4rem;cursor:pointer}
@@ -445,6 +458,7 @@ footer .credit{font-size:.8rem;opacity:.65;text-align:right;max-width:24ch}
   </div>
 </footer>
 
+<div class="sbar" id="sbar"><span data-i="sb_t">Reserva direta, sem comissões</span><a class="btn btn-sun btn-sm" href="#reservar" data-i="sb_b">Ver datas e reservar</a></div>
 <div class="lightbox" id="lb" hidden role="dialog" aria-modal="true" aria-label="Fotografia">
   <img id="lbImg" alt="">
   <button type="button" class="lb-close" id="lbClose" aria-label="Fechar">×</button>
@@ -467,7 +481,7 @@ const WEB3FORMS_KEY = "84d9ae42-f320-4b61-aaea-7b4e9ee98248";
 const AVAILABILITY_URL = "disponibilidade.json";
 
 const T = {
-pt:{lc1:"Condomínio Clube Praia da Rocha III",lc2:"Praia da Rocha",lc3:"Praia dos Três Castelos",lc4:"Portimão, o rio e a marina",lc5:"Praia da Rocha e a marina",hero_k:"Praia da Rocha · Portimão",chip1:"Reserva direta, sem comissões",chip2:"Até 4 hóspedes",chip3:"Estacionamento incluído",q_go:"Ver disponibilidade",nav_apt:"O apartamento",nav_photos:"Fotos",nav_avail:"Disponibilidade",nav_loc:"Localização",nav_book:"Reservar",
+pt:{sb_t:"Reserva direta, sem comissões",sb_b:"Ver datas e reservar",lc1:"Condomínio Clube Praia da Rocha III",lc2:"Praia da Rocha",lc3:"Praia dos Três Castelos",lc4:"Portimão, o rio e a marina",lc5:"Praia da Rocha e a marina",hero_k:"Praia da Rocha · Portimão",chip1:"Reserva direta, sem comissões",chip2:"Até 4 hóspedes",chip3:"Estacionamento incluído",q_go:"Ver disponibilidade",nav_apt:"O apartamento",nav_photos:"Fotos",nav_avail:"Disponibilidade",nav_loc:"Localização",nav_book:"Reservar",
 hero_t:"Um T1 a sete minutos a pé da Praia da Rocha",hero_p:"Apartamento de férias em Portimão, num condomínio fechado com segurança 24 horas e estacionamento. Areal, restaurantes e marina, tudo a pé.",hero_c1:"Ver datas livres",hero_c2:"Ver fotografias",
 f_area:"de área útil",f_guests:"hóspedes no máximo",f_beds:"cama de casal e sofá-cama",f_bath:"casa de banho com banheira",f_terr_b:"Varanda",f_terr:"pequena, com jardim vertical",f_beach:"até ao areal",
 apt_l:"O apartamento",apt_t:"Sala com luz, quarto sossegado e uma pequena varanda para o fim do dia",
@@ -488,7 +502,7 @@ lc_l:"Localização",lc_t:"Entre a praia e a marina, no lado de Portimão",lc_p:
 d1:"Praia da Rocha",d2:"Marina de Portimão",d3:"Fortaleza de Santa Catarina",d4:"Praia dos Três Castelos",d5:"Centro de Portimão",d6:"Aeroporto de Faro",d_approx:"≈ 1,3 km",
 ft_also:"Também em",ft_follow:"Siga-nos",ft_credit:"Fotografia aérea e site por",
 cap:["Sala","Sala e cozinha","Varanda","Quarto","Cozinha","Zona de refeições","Quarto","Varanda à noite"],subj:"Pedido de reserva"},
-en:{lc1:"Clube Praia da Rocha III complex",lc2:"Praia da Rocha",lc3:"Três Castelos beach",lc4:"Portimão, the river and the marina",lc5:"Praia da Rocha and the marina",hero_k:"Praia da Rocha · Portimão",chip1:"Book direct, no platform fees",chip2:"Up to 4 guests",chip3:"Parking included",q_go:"Check availability",nav_apt:"The apartment",nav_photos:"Photos",nav_avail:"Availability",nav_loc:"Location",nav_book:"Book",
+en:{sb_t:"Book direct, no platform fees",sb_b:"See dates & book",lc1:"Clube Praia da Rocha III complex",lc2:"Praia da Rocha",lc3:"Três Castelos beach",lc4:"Portimão, the river and the marina",lc5:"Praia da Rocha and the marina",hero_k:"Praia da Rocha · Portimão",chip1:"Book direct, no platform fees",chip2:"Up to 4 guests",chip3:"Parking included",q_go:"Check availability",nav_apt:"The apartment",nav_photos:"Photos",nav_avail:"Availability",nav_loc:"Location",nav_book:"Book",
 hero_t:"A one-bedroom flat a seven-minute walk from Praia da Rocha",hero_p:"Holiday apartment in Portimão, in a gated complex with 24-hour security and parking. Beach, restaurants and marina all within walking distance.",hero_c1:"See free dates",hero_c2:"See photos",
 f_area:"of living space",f_guests:"guests maximum",f_beds:"double bed and sofa bed",f_bath:"bathroom with bathtub",f_terr_b:"Balcony",f_terr:"small, with a green wall",f_beach:"to the sand",
 apt_l:"The apartment",apt_t:"A bright living room, a quiet bedroom and a small balcony for the evening",
@@ -509,7 +523,7 @@ lc_l:"Location",lc_t:"Between the beach and the marina, on the Portimão side",l
 d1:"Praia da Rocha beach",d2:"Portimão Marina",d3:"Santa Catarina Fortress",d4:"Três Castelos beach",d5:"Portimão town centre",d6:"Faro Airport",d_approx:"≈ 1.3 km",
 ft_also:"Also on",ft_follow:"Follow us",ft_credit:"Aerial photo and website by",
 cap:["Living room","Living room and kitchen","Balcony","Bedroom","Kitchen","Dining area","Bedroom","Balcony at night"],subj:"Booking request"},
-es:{lc1:"Complejo Clube Praia da Rocha III",lc2:"Praia da Rocha",lc3:"Playa de Três Castelos",lc4:"Portimão, el río y el puerto deportivo",lc5:"Praia da Rocha y el puerto deportivo",hero_k:"Praia da Rocha · Portimão",chip1:"Reserva directa, sin comisiones",chip2:"Hasta 4 huéspedes",chip3:"Aparcamiento incluido",q_go:"Ver disponibilidad",nav_apt:"El apartamento",nav_photos:"Fotos",nav_avail:"Disponibilidad",nav_loc:"Ubicación",nav_book:"Reservar",
+es:{sb_t:"Reserva directa, sin comisiones",sb_b:"Ver fechas y reservar",lc1:"Complejo Clube Praia da Rocha III",lc2:"Praia da Rocha",lc3:"Playa de Três Castelos",lc4:"Portimão, el río y el puerto deportivo",lc5:"Praia da Rocha y el puerto deportivo",hero_k:"Praia da Rocha · Portimão",chip1:"Reserva directa, sin comisiones",chip2:"Hasta 4 huéspedes",chip3:"Aparcamiento incluido",q_go:"Ver disponibilidad",nav_apt:"El apartamento",nav_photos:"Fotos",nav_avail:"Disponibilidad",nav_loc:"Ubicación",nav_book:"Reservar",
 hero_t:"Un apartamento de un dormitorio a siete minutos a pie de la Praia da Rocha",hero_p:"Apartamento vacacional en Portimão, en un complejo cerrado con seguridad 24 horas y aparcamiento. Playa, restaurantes y puerto deportivo, todo a pie.",hero_c1:"Ver fechas libres",hero_c2:"Ver fotos",
 f_area:"de superficie",f_guests:"huéspedes como máximo",f_beds:"cama doble y sofá cama",f_bath:"baño con bañera",f_terr_b:"Balcón",f_terr:"pequeño, con jardín vertical",f_beach:"hasta la arena",
 apt_l:"El apartamento",apt_t:"Salón luminoso, dormitorio tranquilo y un pequeño balcón para el final del día",
@@ -544,7 +558,7 @@ function renderGallery(){
   gal.innerHTML="";
   PHOTOS.forEach((p,i)=>{
     const b=document.createElement("button");b.type="button";
-    b.className=i===0?"g1":(i===1?"g2":"");
+    b.className=i===0?"g1":(i===PHOTOS.length-1?"gw":"");
     b.setAttribute("aria-label",t("cap")[i]);
     b.innerHTML=`<img src="img/${p}.jpg" alt="${t("cap")[i]}" loading="${i<3?"eager":"lazy"}"><span class="cap">${t("cap")[i]}</span>`;
     b.addEventListener("click",()=>openLb(i));gal.appendChild(b);
@@ -720,6 +734,16 @@ fetch(AVAILABILITY_URL,{cache:"no-store"}).then(r=>r.ok?r.json():Promise.reject(
   function stop(){clearInterval(timer);timer=null}
   if('IntersectionObserver' in window){new IntersectionObserver(function(e){e[0].isIntersecting?start():stop()}).observe(box)}else start();
   box.addEventListener('click',function(){show((i+1)%imgs.length);stop();start()});
+})();
+
+/* ---------- sticky booking bar on phones ---------- */
+(function(){
+  var bar=document.getElementById('sbar'),hero=document.querySelector('.hero'),form=document.getElementById('reservar');
+  if(!bar||!hero||!form||!('IntersectionObserver' in window)) return;
+  var heroIn=true,formIn=false;
+  function upd(){bar.classList.toggle('on',!heroIn&&!formIn)}
+  new IntersectionObserver(function(e){heroIn=e[0].isIntersecting;upd()}).observe(hero);
+  new IntersectionObserver(function(e){formIn=e[0].isIntersecting;upd()},{rootMargin:'0px 0px -30% 0px'}).observe(form);
 })();
 </script>
 </body>
